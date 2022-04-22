@@ -1,0 +1,19 @@
+﻿  Car.cpp
+D:\SFML Project\SFML_CAR\SFML_CAR\Car.cpp(29,27): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\SFML Project\SFML_CAR\SFML_CAR\Car.cpp(32,25): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\SFML Project\SFML_CAR\SFML_CAR\Car.cpp(37,27): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=int
+          ]
+D:\SFML Project\SFML_CAR\SFML_CAR\Car.cpp(134,28): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  Generating code
+  0 of 184 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  SFML_CAR.vcxproj -> D:\SFML Project\SFML_CAR\x64\Release\SFML_CAR.exe
