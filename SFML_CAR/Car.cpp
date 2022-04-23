@@ -24,12 +24,14 @@ void Car::inittexture()
 void Car::initsprite()
 {
 	sprite.setTexture(texture);
-	sprite.setScale(.75, 1.25);
+	sprite.setScale(.75, 1.75);
 	carsprite.setTexture(texture1);
 	carsprite.setScale(.1, .1);
 	carsprite.setPosition(300.f, 600.f);
 	enemy.setTexture(texture2);
 	enemy.setScale(.17, .17);
+	m = sprite.getGlobalBounds().left;
+	n = sprite.getGlobalBounds().top;
 }
 
 void Car::initenemy()
@@ -154,6 +156,14 @@ void Car::updateenemies()
 			points++;
 		}
 	}
+	sprite.move(0, -movementspeed + 2);
+	if (sprite.getGlobalBounds().top + sprite.getGlobalBounds().height < window->getSize().y)
+	{
+		//printf("aaa\n");
+		sprite.setPosition(m, n);
+	}
+
+
 }
 
 void Car::collision()
@@ -166,6 +176,7 @@ void Car::collision()
 			break;
 		}
 	}
+
 }
 
 void Car::update()
@@ -183,7 +194,7 @@ void Car::update()
 	{
 		window->close();
 	}
-	
+
 }
 
 void Car::rendercar(sf::RenderTarget& target)
@@ -204,7 +215,7 @@ void Car::render()
 {
 	window->clear();
 
-	
+
 	renderbg(*window);
 	rendercar(*window);
 

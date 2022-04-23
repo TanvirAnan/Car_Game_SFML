@@ -40,9 +40,10 @@ private:
 	sf::Sprite enemy;
 	vector<Sprite>enemies;
 
-	int enemycar=0;
+	int enemycar = 0;
 	int enemymaxcar = 5;
 	int timer = 0;
+	float m, n;
 
 	bool gameover;
 	int points;
@@ -67,7 +68,7 @@ public:
 	void spawnenemy();
 	void updateenemies();
 	void collision();
-	
+
 	void update();
 
 	void rendercar(sf::RenderTarget& target);
